@@ -60,6 +60,7 @@ public class RedisDisLockTest {
             th.start();
         }
     }
+    
     class OrderThread extends Thread{
         String lockKey="";
         Jedis jedis;
