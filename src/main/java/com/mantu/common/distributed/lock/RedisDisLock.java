@@ -112,7 +112,7 @@ public class RedisDisLock implements DisLock{
     public void unlock(Jedis jedis) {
         Thread thread = Thread.currentThread();
         if(thread==this.getExclusiveOwnerThread()){
-            LOG.debug("unlock the thread {}",thread.getId());
+            LOG.debug("unlock the thread {}",thread.getName());
             release(jedis);
         }
     }
